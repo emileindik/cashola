@@ -1,9 +1,9 @@
 # cashola
 > Persist the state of an object across processes with one line of code. 
 
-There are two main benefits to using this project over a traditional state management solution.
-(1) Simpler than introducing a database-like resource into your architecture. Consider if this makes sense for your particular use case.
-(2) No need to write code to intercept state updates, save those updates, nor fetch the current state. Simply modify your state object like you normally would and the js Proxy object will take care of the rest.
+There are two main benefits to using this project over a traditional state management solution.  
+(1) Simpler than introducing a database-like resource into your architecture. Consider if this makes sense for your particular use case.  
+(2) No need to write code to intercept state updates, save those updates, nor fetch the current state. Simply modify your state object like you normally would and the js Proxy object will take care of the rest.  
 
 `cashola` uses your local filesystem to persist state under-the-hood.
 
