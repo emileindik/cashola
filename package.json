@@ -3,17 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "build": "rm -rf dist && tsc",
-    "mon": "nodemon index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "clear": "./bin/clear.js",
+    "clear-all": "./bin/clear-all.js"
   },
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "clear": "clear",
+    "clear-all": "clear-all",
+    "test": "node dist/test/index.js",
+    "build": "rm -rf dist && tsc",
+    "watch": "tsc -w",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Emile Indik",
+  "repository": "emileindik/cashola",
+  "keywords": [],
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.11.9",
-    "nodemon": "^2.0.20",
-    "ts-node": "^10.9.1",
     "typescript": "^4.8.4"
   },
   "dependencies": {
