@@ -135,18 +135,30 @@ import { remember } from 'cashola';
 ```
 
 #### Using npm command
-It is sometimes useful to remove storage from outside the sourcecode of a program.
-The `clear` command takes an object key and an optional storageDir path.
+It is sometimes useful to remove storage from outside the sourcecode of a program.  
+The `cashola-clear-all` command takes an optional storageDir path.  
+The `cashola-clear` command takes an object key and an optional storageDir path.  
+
+*package.json*
+```json
+"scripts": {
+  "clear": "cashola-clear",
+  "clear-all": "cashola-clear-all"
+  ...
+}
+```
 ```sh
 npm run clear -- starter-obj-example
 # With storageDir specified as ./.cashola
 npm run clear -- timestamp-example ./.cashola
-```
-The `clear-all` command takes an optional storageDir path.
-```sh
+
 npm run clear-all
 # With storageDir specified as ./.cashola
 npm run clear -- ./.cashola
+```
+Or without the package.json modifications:
+```sh
+./node_modules/cashola/.bin/cashola-clear-all
 ```
 
 
