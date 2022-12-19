@@ -58,7 +58,7 @@ const myState = rememberSync<Record<string, string>>('timestamp-example');
 console.log('Before:', myState);
 // First run: {}
 // Second run: { <timeString1>: 'hi! }
-myState[new Date.getTime().toString()] = 'hi!';
+myState[new Date().getTime().toString()] = 'hi!';
 console.log('After:', myState);
 // First run: { <timeString1>: 'hi! }
 // Second run: { <timeString1>: 'hi!, <timeString2>: 'hi! }
